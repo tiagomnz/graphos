@@ -53,7 +53,7 @@ if uploaded_file is not None:
             selected_user, df)
 
         # a primeira fase é mostrar as estatísticas básicas como número de usuários, número de mensagens, número de mídia compartilhada e etc. Então para exibir em 4 colunas
-        col1, col2, col3, col4 = st.beta_columns(4)
+        col1, col2, col3, col4 = st.columns(4)
 
         with col1:
             st.header("Total de Menssagens")
@@ -80,7 +80,7 @@ if uploaded_file is not None:
             st.title('Usuário mais ocupado')
             busycount, newdf = stats.fetchbusyuser(df)
             fig, ax = plt.subplots()
-            col1, col2 = st.beta_columns(2)
+            col1, col2 = st.columns(2)
             with col1:
                 ax.bar(busycount.index, busycount.values, color='red')
                 plt.xticks(rotation='vertical')
@@ -113,7 +113,7 @@ if uploaded_file is not None:
 
         st.title("Analise de Emoji")
 
-        col1, col2 = st.beta_columns(2)
+        col1, col2 = st.columns(2)
 
         with col1:
             st.dataframe(emoji_df)
@@ -137,7 +137,7 @@ if uploaded_file is not None:
 
         st.title("Mapa de atividade")
 
-        col1, col2 = st.beta_columns(2)
+        col1, col2 = st.columns(2)
 
         with col1:
 
