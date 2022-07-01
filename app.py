@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 
-st.sidebar.title("Analisador de conversa Whatsapp ")
+st.sidebar.title("Whatsapp ReportGraph ")
 
 # Subir arquivo
 
@@ -37,7 +37,7 @@ if uploaded_file is not None:
     # Organizando 
     user_list.sort()
 
-    # Incluindo dados gerais para análise geral do grupo
+    # Incluindo dados gerais para análise Overall do grupo
 
     user_list.insert(0, "Overall")
 
@@ -45,7 +45,7 @@ if uploaded_file is not None:
         "Mostrar a analise em relação ao", user_list)
 
     st.title("Analizando conversa de WhatsApp para " + selected_user)
-    if st.sidebar.button("Exebir Analise"):
+    if st.sidebar.button("Exibir Analise"):
 
         # Capturando o estado do usuário selecionado do script
 
