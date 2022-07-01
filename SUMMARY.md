@@ -1,7 +1,6 @@
 # Table of contents
 
 * [README](README.md)
-  * [Teste](readme/teste.md)
 * [Motivação](motivacao.md)
 * [Problemas](problemas.md)
 * [Discovery](discovery.md)
