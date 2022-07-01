@@ -10,18 +10,17 @@ Ferramenta para extrair dados de conversa do Whatsapp e gerar infográficos.
 
 ## Problemas
 
-Discovery
+## Discovery
 
-Objetivos
+## Objetivos
 
-Stack Tecnológico
+## Stack Tecnológico
 
-Descrição da Solução
+## Solução e Arquitetura
 
-Arquitetura
+## Validação e estratégia
 
-Validação e Estratégia
+## Consolidação e Validação
 
-Consolidações e Validações
+## Limitação do projeto
 
-Limitação do projeto
