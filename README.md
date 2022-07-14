@@ -1,6 +1,6 @@
 # README
 
-![Logo](logo.png)
+![Logo](graphos.png)
 
 ## Analise de conversa Whatsapp
 
