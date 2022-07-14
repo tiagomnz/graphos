@@ -19,10 +19,15 @@ def getstring(text):
 
 
 def preprocess(data):
-
+    # Padrão capturado
+    # Antes da atualização
     pattern = '\d{1,2}/\d{1,2}/\d{2,4},\s\d{1,2}:\d{2}\s-\s'
-    messages = re.split(pattern, data)[1:]
-    dates = re.findall(pattern, data)
+    # Capturando "de noite, de dia e da tarde"
+    comma = re.sub('\s',', ',data,count=1)
+    clear = re.sub ('\w{2}\s\w{3,5}\s','',comma,count=1)
+    messages = re.split(pattern, clear)[1:]
+    dates = re.findall(pattern, clear)
+
 
     df = pd.DataFrame({'user_messages': messages,
                        'message_date': dates})

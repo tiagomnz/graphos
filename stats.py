@@ -13,7 +13,7 @@ def fetchstats(selected_user, df):
 
     #se o usuário selecionado for um usuário específico, faça alterações no dataframe, caso contrário, não faça alterações
 
-    if selected_user != 'Overall':
+    if selected_user != 'Todos':
         df = df[df['User'] == selected_user]
 
     num_messages = df.shape[0]
@@ -21,8 +21,7 @@ def fetchstats(selected_user, df):
     for message in df['Message']:
         words.extend(message.split())
 
-    # contando o número de arquivos de mídia compartilhados
-
+    # contando o número de arquivos de mídia omitida
     mediaommitted = df[df['Message'] == '<Media omitted>']
 
     # Numero de links compartilhados 
@@ -47,7 +46,7 @@ def fetchbusyuser(df):
 
 def createwordcloud(selected_user, df):
 
-    if selected_user != 'Overall':
+    if selected_user != 'Todos':
         df = df[df['User'] == selected_user]
 
     wc = WordCloud(width=500, height=500,
@@ -69,7 +68,7 @@ def getcommonwords(selecteduser, df):
     stopwords = file.read()
     stopwords = stopwords.split('\n')
 
-    if selecteduser != 'Overall':
+    if selecteduser != 'Todos':
         df = df[df['User'] == selecteduser]
 
     temp = df[(df['User'] != 'Group Notification') |
@@ -88,7 +87,7 @@ def getcommonwords(selecteduser, df):
 
 def getemojistats(selecteduser, df):
 
-    if selecteduser != 'Overall':
+    if selecteduser != 'Todos':
         df = df[df['User'] == selecteduser]
 
     emojis = []
@@ -102,7 +101,7 @@ def getemojistats(selecteduser, df):
 
 def monthtimeline(selecteduser, df):
 
-    if selecteduser != 'Overall':
+    if selecteduser != 'Todos':
         df = df[df['User'] == selecteduser]
 
     temp = df.groupby(['Year', 'Month_num', 'Month']).count()[
@@ -119,7 +118,7 @@ def monthtimeline(selecteduser, df):
 
 def monthactivitymap(selecteduser, df):
 
-    if selecteduser != 'Overall':
+    if selecteduser != 'Todos':
         df = df[df['User'] == selecteduser]
 
     return df['Month'].value_counts()
@@ -127,7 +126,7 @@ def monthactivitymap(selecteduser, df):
 
 def weekactivitymap(selecteduser, df):
 
-    if selecteduser != 'Overall':
+    if selecteduser != 'Todos':
         df = df[df['User'] == selecteduser]
 
     return df['Day_name'].value_counts()

@@ -5,12 +5,14 @@ import stats
 import matplotlib.pyplot as plt
 import numpy as np
 
-
-st.sidebar.title("Whatsapp ReportGraph ")
+#st.image ("https://raw.githubusercontent.com/tiagomnz/graphos/main/graphos.png")
+st.sidebar.image("https://raw.githubusercontent.com/tiagomnz/graphos/f20e30a5a30dd9c5d38f3d17261fb62284109383/graphos.svg")
+st.sidebar.title("PAINEL")
 
 # Subir arquivo
 
 uploaded_file = st.sidebar.file_uploader("Escolha o arquivo")
+
 
 if uploaded_file is not None:
     bytes_data = uploaded_file.getvalue()
@@ -25,21 +27,23 @@ if uploaded_file is not None:
 
     # Exibindo dataframe
 
-    # st.dataframe(df)
+    #st.dataframe(df)
 
     # Capturando usuários
     user_list = df['User'].unique().tolist()
 
     # removendo notificação do grupo
-
+    # Exibindo usuarios
+    # st.dataframe(user_list)
+    
     user_list.remove('Group Notification')
 
     # Organizando 
     user_list.sort()
 
-    # Incluindo dados gerais para análise Overall do grupo
+    # Incluindo dados gerais para análise Todos do grupo
 
-    user_list.insert(0, "Overall")
+    user_list.insert(0, "Todos")
 
     selected_user = st.sidebar.selectbox(
         "Mostrar a analise em relação ao", user_list)
@@ -73,7 +77,7 @@ if uploaded_file is not None:
 
         # Localizando o usuário mais sobrecarregado
 
-        if selected_user == 'Overall':
+        if selected_user == 'Todos':
 
             # Divide o espaço em duas colunas
 
@@ -160,4 +164,5 @@ if uploaded_file is not None:
             ax.bar(busy_month.index, busy_month.values, color='orange')
             plt.xticks(rotation='vertical')
             plt.tight_layout()
+            #st.bar_chart(busy_month)
             st.pyplot(fig)
