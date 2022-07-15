@@ -6,8 +6,7 @@
 
 Ferramenta para extrair dados de conversa do Whatsapp e gerar infográficos.
 
-## [Motivação](./#motivacao) <a href="#motivacao" id="motivacao"></a>
-
+## [Motivação](#motivacao.md)
 ## [Problemas](./#problemas)
 
 ## [Discovery](./#discovery)
