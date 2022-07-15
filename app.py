@@ -5,6 +5,18 @@ import stats
 import matplotlib.pyplot as plt
 import numpy as np
 
+st.set_page_config(
+     page_title="GRAPHOS - insights chats",
+     page_icon="✴",
+     layout="wide",
+     initial_sidebar_state="expanded",
+     menu_items={
+         'Get Help': 'https://www.digitalmonkey.com.br',
+         'Report a bug': "https://github.com/tiagomnz/graphos/pulls",
+         'About': "# GRAPHOS. Extraindo Insights de conversa!"
+     }
+ )
+
 #st.image ("https://raw.githubusercontent.com/tiagomnz/graphos/main/graphos.png")
 st.sidebar.image("https://raw.githubusercontent.com/tiagomnz/graphos/f20e30a5a30dd9c5d38f3d17261fb62284109383/graphos.svg")
 st.sidebar.title("PAINEL")
