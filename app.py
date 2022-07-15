@@ -48,7 +48,7 @@ if uploaded_file is not None:
     selected_user = st.sidebar.selectbox(
         "Mostrar a analise em relação ao", user_list)
 
-    st.title("Analizando conversa de WhatsApp para " + selected_user)
+    st.title("Analizando conversa de WhatsApp para o usuário " + selected_user)
     if st.sidebar.button("Exibir Analise"):
 
         # Capturando o estado do usuário selecionado do script
@@ -91,7 +91,8 @@ if uploaded_file is not None:
                 st.pyplot(fig)
 
             with col2:
-                st.dataframe(newdf)
+                print ('teste')
+                #st.dataframe(newdf)
 
         # Word Cloud
 
@@ -100,6 +101,7 @@ if uploaded_file is not None:
         fig, ax = plt.subplots()
         ax.imshow(df_img)
         st.pyplot(fig)
+
 
         # Palavras mais comuns - Grafico
 
