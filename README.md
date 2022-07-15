@@ -6,21 +6,20 @@
 
 Ferramenta para extrair dados de conversa do Whatsapp e gerar infográficos.
 
-## [Motivação](./#motivacao) <a href="#motivacao" id="motivacao"></a>
+## [Motivação](motivacao.md)
+## [Problemas](problemas.md)
 
-## [Problemas](./#problemas)
+## [Discovery](discovery.md)
 
-## [Discovery](./#discovery)
+## [Objetivos](objetivos.md)
 
-## [Objetivos](./#objetivos)
+## [Stack Tecnológico](stack-tecnologico.md)
 
-## [Stack Tecnológico](./#stack-tecnologico)
+## [Solução e Arquitetura](solucao-e-arquitetura.md)
 
-## [Solução e Arquitetura](./#solucao-e-arquitetura)
+## [Validação e estratégia](validacao-e-estrategia.md)
 
-## [Validação e estratégia](./#validacao-e-estrategia)
+## [Consolidação e Validação](consolidacao-e-validacao.md)
 
-## [Consolidação e Validação](./#consolidacao-e-validacao)
-
-## [Limitação do projeto](./#limitacao-do-projeto)
+## [Limitação do projeto](limitacao-do-projeto.md)
 
